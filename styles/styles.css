@@ -15,6 +15,7 @@
     --secondary-bcg:#F5F4FA; 
     --icon-color: #AFB1B8;
     --space-icons: 10px;
+    --timing-duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
@@ -98,6 +99,8 @@ img{
 .site-nav .link {
     color: var(--title-text-color);
     font-weight:500;
+
+    transition: color var(--timing-duration) var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -141,7 +144,7 @@ img{
     letter-spacing: 0.02em;
     line-height: 1.2;
 
-    transition: color 250ms var(--timing-function);
+    transition: color var(--timing-duration) var(--timing-function);
  }
  .contacts .item:hover, 
  .contacts .item:focus {
@@ -157,6 +160,7 @@ margin-right: var(--space-icons);
 
 .hero{
     width: 1600px;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--hero-bcg);
@@ -202,7 +206,7 @@ margin-right: var(--space-icons);
     text-align: center;
     letter-spacing: 0.06em; 
 
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color var(--timing-duration) var(--timing-function);
 }
 .btn:hover {
     background-color: var(--btn-hover);
@@ -324,6 +328,8 @@ margin-right: var(--space-icons);
     margin-top: 16px;
     list-style: none;
 }
+
+
 .link-icon{
     display: flex;
     justify-content: center;
@@ -332,10 +338,12 @@ margin-right: var(--space-icons);
     height: 44px;
     border-radius: 50%;
     
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color var(--timing-duration) var(--timing-function);
 }
 .link-icon:hover,
-.link-icon:focus{
+.link-icon:focus,
+.link-icon:hover.svg,
+.link-icon:focus.svg{
     background-color: var(--accent-color);
     --icon-color-socials: #fff;
 }
@@ -352,7 +360,7 @@ margin-right: var(--space-icons);
     border-radius: 4px;
     fill: var(--icon-color);
 
-    transition: border 250ms var(--timing-function), fill 250ms var(--timing-function);
+    transition: border var(--timing-duration) var(--timing-function), fill var(--timing-duration) var(--timing-function);
 }
 .box-client:hover,
 .box-client:focus{
@@ -426,7 +434,7 @@ margin-right: var(--space-icons);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
 
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color var(--timing-duration) var(--timing-function);
 }
 .social-link-footer .social-icon-footer{
     fill: #fff;
@@ -446,7 +454,7 @@ margin-right: var(--space-icons);
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: transform 250ms var(--timing-function);
+    transition: transform var(--timing-duration) var(--timing-function), opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
 }
 
 .backdrop.is-hidden{
@@ -465,6 +473,9 @@ margin-right: var(--space-icons);
     background-color: #FFFFFF; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    
+    transform: scale(140%);
+    transition: transform var(--timing-duration) var(--timing-function);
 }
 .modal-close{
     position: absolute;
@@ -480,6 +491,7 @@ margin-right: var(--space-icons);
     background-color: transparent;
     padding: 0;
     cursor: pointer;
+  
 }
 
 /* ====== Стoрінка Портфолио ==========*/
@@ -508,7 +520,7 @@ margin-right: var(--space-icons);
     border-radius: 4px;
     border: none;
 
-    transition: color 250ms var(--timing-function), background 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+    transition: color var(--timing-duration) var(--timing-function), background var(--timing-duration) var(--timing-function), box-shadow var(--timing-duration) var(--timing-function);
 }
 
 .filter:hover,
@@ -531,7 +543,7 @@ margin-right: var(--space-icons);
     margin-right: var(--card-set-gap);
     margin-bottom: var(--card-set-gap);
 
-    transition: box-shadow 250ms var(--timing-function);
+    transition: box-shadow var(--timing-duration) var(--timing-function);
  
 }
 
@@ -569,7 +581,7 @@ margin-right: var(--space-icons);
     color: var(--white-text);
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform 250ms var(--timing-function);
+    transition: transform var(--timing-duration) var(--timing-function);
 }
 
 .portfolio-overlay{
