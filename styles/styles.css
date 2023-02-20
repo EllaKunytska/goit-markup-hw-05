@@ -455,14 +455,14 @@ margin-right: var(--space-icons);
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
     transition: transform var(--timing-duration) var(--timing-function), opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
-}
+   }
 
 .backdrop.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: scale(140%);
-}
+   }
+
 .modal{
     position: absolute;
     top: 50%;
@@ -473,10 +473,8 @@ margin-right: var(--space-icons);
     background-color: #FFFFFF; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    
-    transform: scale(140%);
-    transition: transform var(--timing-duration) var(--timing-function);
 }
+
 .modal-close{
     position: absolute;
     top: 8px;
@@ -491,7 +489,6 @@ margin-right: var(--space-icons);
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-  
 }
 
 /* ====== Стoрінка Портфолио ==========*/
