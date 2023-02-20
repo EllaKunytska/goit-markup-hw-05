@@ -489,7 +489,8 @@ margin-right: var(--space-icons);
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-}
+    transition: transform var(--timing-duration) var(--timing-function), var(--timing-duration), var(--timing-function);
+    }
 
 /* ====== Стoрінка Портфолио ==========*/
 
