@@ -17,6 +17,7 @@
     --space-icons: 10px;
     --timing-duration: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --icon-color-socials: #FFFFFF;
 }
 body {
     background-color: var(--bcg-color);
@@ -337,16 +338,17 @@ margin-right: var(--space-icons);
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    
-    transition: background-color var(--timing-duration) var(--timing-function);
+    fill: var(--icon-color);
+
+    transition: background-color var(--timing-duration) var(--timing-function), fill var(--timing-duration) var(--timing-function);
 }
+
 .link-icon:hover,
-.link-icon:focus,
-.link-icon:hover.svg,
-.link-icon:focus.svg{
-    background-color: var(--accent-color);
-    --icon-color-socials: #fff;
+.link-icon:focus{
+  background-color: var(--accent-color);  
+  fill: var(--icon-color-socials);
 }
+
 .margin-icon:not(:last-child){
     margin-right: var(--space-icons);
 }
@@ -453,8 +455,13 @@ margin-right: var(--space-icons);
     left: 0;
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+
     background-color: rgba(0, 0, 0, 0.2);
-    transition: transform var(--timing-duration) var(--timing-function), opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
+    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
    }
 
 .backdrop.is-hidden{
@@ -463,16 +470,19 @@ margin-right: var(--space-icons);
     pointer-events: none;
    }
 
+   .backdrop.is-hidden .modal{
+    transform: scale(140%);
+   }
 .modal{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
     width: 528px;
     height: 580px;
     background-color: #FFFFFF; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transform: scale(100%);
+    transition: transform var(--timing-duration) var(--timing-function);
 }
 
 .modal-close{
